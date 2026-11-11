@@ -74,3 +74,5 @@ open ./build/好事桌宠.app
 | `build.sh` | 编译、打包素材并进行本地签名 |
 
 本项目的代码和文档采用根目录 `LICENSE` 中的 MIT 许可。交互和播放设计参考了 SunPet，其原作者的 MIT 许可保留在 `LICENSE-SunPet` 中。人物图片和声音素材不属于这些代码许可范围。
+
+应用启动后及运行期间每天检查 GitHub Release；有新版本时询问是否打开发布页面，不自动下载或安装。无 Release 或网络不可用时不提示。

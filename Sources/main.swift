@@ -130,6 +130,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, AVAudioPlayerDelegate 
     var panelSize: NSSize { NSSize(width: size, height: (size - 16) * imageRatio + 52) }
 
     func applicationDidFinishLaunching(_ notification: Notification) {
+        UpdateChecker.start(repository: "FengGe-Desktop-Pet")
         if !selfTest, let id = Bundle.main.bundleIdentifier {
             let others = NSRunningApplication.runningApplications(withBundleIdentifier: id).filter { $0.processIdentifier != getpid() }
             if !others.isEmpty { NSApp.terminate(nil); return }

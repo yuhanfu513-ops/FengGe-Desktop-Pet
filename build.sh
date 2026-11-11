@@ -3,7 +3,7 @@ set -euo pipefail
 cd "$(dirname "$0")"
 APP="build/好事桌宠.app"
 mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources"
-swiftc -O -target arm64-apple-macosx14.0 -framework AppKit -framework AVFoundation Sources/main.swift -o "$APP/Contents/MacOS/GoodThingPet"
+swiftc -O -target arm64-apple-macosx14.0 -framework AppKit -framework AVFoundation Sources/UpdateChecker.swift Sources/main.swift -o "$APP/Contents/MacOS/GoodThingPet"
 cp -R Assets/. "$APP/Contents/Resources/"
 cp LICENSE "$APP/Contents/Resources/"
 cp LICENSE-SunPet "$APP/Contents/Resources/"
